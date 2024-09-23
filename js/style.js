@@ -46,10 +46,99 @@ document.getElementById('donate-noakhali-btn')
       
 })
 
+// 1st card end
+
+
+// 2nd card start
+document.getElementById('donate-feni-btn')
+.addEventListener('click', function(event){
+    event.preventDefault();
+    const donateAmountFeni = getInputFieldValueById('donate-feni-amount');
+
+    if(donateAmountFeni <= 0 || isNaN(donateAmountFeni)){
+        
+        return alert('Invalid Amount')
+    }
+
+
+    const feniBDT = getTextValueById('feni-BDT');
+
+    const feniNewBDT = feniBDT + donateAmountFeni;
+
+    document.getElementById('feni-BDT').innerText=feniNewBDT;
+
+    const balance = getTextValueById('balance');
+    const balanceRemaining = balance - donateAmountFeni;
+    document.getElementById('balance').innerText=balanceRemaining;
+
+// history section
+    const historyItem = document.createElement("div");
+    historyItem.className="bg-white p-3 rounded-xl border-2 border-gray-200";
+    
+    
+    
+    historyItem.innerHTML=`
+    <p class="font-extrabold">${donateAmountFeni} taka is Donate for Flood Relief in Feni,Bangladesh</p>
+    <p class="text-xs text-gray-500">Date:${day} ${month} ${date} ${year} ${time} ${timezone}(Bangladesh Standard Time)</p>
+    `;
+    
+    
+    const historyContainer = document.getElementById('history-list');
+    
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
+})
+
+// 2nd card end
 
 
 
+// 3rd card start
+document.getElementById('donate-injured-btn')
+.addEventListener('click', function(event){
+    event.preventDefault();
+    const donateAmountInjured = getInputFieldValueById('donate-injured-amount')
 
+
+    if(donateAmountInjured <= 0 || isNaN(donateAmountInjured)){
+        
+        return alert('Invalid Amount')
+    }
+
+
+    const injuredBDT = getTextValueById('injured-BDT');
+
+    const injuredNewBDT = injuredBDT + donateAmountInjured;
+
+    document.getElementById('injured-BDT').innerText=injuredNewBDT;
+
+    const balance = getTextValueById('balance');
+    const balanceRemaining = balance - donateAmountInjured;
+    document.getElementById('balance').innerText=balanceRemaining;
+
+
+    // history section
+
+    const historyItem = document.createElement("div");
+historyItem.className="bg-white p-3 rounded-xl border-2 border-gray-200";
+
+
+
+historyItem.innerHTML=`
+<p class="font-extrabold">${donateAmountInjured} taka is Donate for Aid for Injured in the Quota Movement, Bangladesh</p>
+<p class="text-xs text-gray-500">Date:${day} ${month} ${date} ${year} ${time} ${timezone}(Bangladesh Standard Time)</p>
+`;
+
+
+const historyContainer = document.getElementById('history-list');
+
+historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
+
+
+})
+
+// 3rd card end
 
 const donationTab = document.getElementById('donation-btn')
 const historiTab = document.getElementById('history-btn')
