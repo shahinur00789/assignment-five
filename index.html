@@ -43,40 +43,110 @@ color: rgb(128, 126, 126);
         <header class="sticky top-0  bg-blue-100 pb-2">
             <!-- navbar start --> 
                 <nav class="bg-[#F9F7F3] lg:pb-2">
-                    <div class="navbar lg:container mx-auto mb-8">
+
+    <div class="navbar lg:container mx-auto mb-8">
+
                     <div class="navbar-start">
             
-                      <button id="blog-btn" class="bg-[#B4F461] px-8 py-3 rounded-xl text-xl font-bold">Blog</button>
+    <button id="blog-btn" class="bg-[#B4F461] px-8 py-3 rounded-xl text-xl font-bold">Blog</button>
+             </div>
+
+
+<div class="navbar-center flex sm:flex-col lg:flex-row">
+    <div><img src="assets/logo.png" alt=""></div>
+
+     <div> <p class="">Donate Bangladesh</p></div>
+            </div>
             
-                    </div>
-                    <div class="navbar-center flex sm:flex-col lg:flex-row">
-                      <div><img src="assets/logo.png" alt=""></div>
-                     <div> <p class="">Donate Bangladesh</p></div>
-                    </div>
+                    
             
-                    <div class="navbar-end">
-                        <img src="assets/coin.png" alt="">
-                        <p><span id="balance">10000</span> BDT</p>
-                      </div>
-                  </div>
-               </nav>
-                
+            <div class="navbar-end">
+    <img src="assets/coin.png" alt="">
+    <p><span id="balance">10000</span> BDT</p> </div>
+    </div>
+ </nav>
+
+
+                <!-- donition button -->
             <div class="text-center mb-12 pt-2">
                     <button id="donation-btn" class="btn btn-lg mr-4 bg-primary-c font-bold">Donation</button>
+
+                    <!-- history button -->
             
                     <button id="history-btn" class="btn btn-lg  btn-text">History</button>
                  </div>
             
-            
-            
-               </header> 
+          </header> 
                <!-- navbar end -->
 
 
  
 
 
-    <main>
+    <main class="lg:container mx-auto">
+
+
+        <section id="donate-card" class="space-y-16">
+            <!-- donition card 1 -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 p-2 lg:p-4 gap-5 mt-12 shadow-xl rounded-xl bg-gray-100">
+              <!-- image section -->
+                    <div class="sm:grid-cols-1 lg:col-span-1">
+                      <img src="assets/noakhali.png" alt="">
+              
+                    </div>
+              
+              
+              
+                    <!-- text section -->
+                     <div class="sm:grid-cols-1 lg:col-span-2 space-y-4">
+                      <button class="btn"> 
+                        <div class="flex justify-center items-center">
+                      <img src="assets/coin.png" alt="">
+
+          <p class="text-[#111111B3]"><span id="noakhali-BDT">0</span> BDT</p>
+                    </div></button>
+              
+                     
+                      
+                      <h5 class="font-extrabold text-xl">Donate for Flood at Noakhali, Bangladesh</h5>
+            
+                      <p class="text-[#111111B3]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            
+                      <input id="donate-noakhali-amount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br>
+                      <button onclick="my_modal_1.showModal()" id="donate-noakhali-btn" class="btn btn-lg w-full bg-primary-c">Donate Now</button>
+
+
+                      <!-- modal start -->
+
+<dialog id="my_modal_1" class="modal">
+    <div class="modal-box">
+      <div class="flex flex-col justify-center items-center space-y-3">
+        <h1 class="font-extrabold text-xl">Congrates!</h1>
+        <img src="assets/coin.png" alt="">
+        <p class="text-gray-500">You Have Donated for Humankind</p>
+        <h1 class="font-bold ">Successfully</h1>
+         <div class="modal-action"></div>
+        <form method="dialog">
+         
+          <div class="mx-auto"><button class="btn text-gray-600 bg-primary-c">close confirmation</button></div>
+        </form>
+      </div> 
+      </div>
+      
+  </dialog>
+  
+  <!-- modal end -->
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
 
