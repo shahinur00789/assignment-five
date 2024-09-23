@@ -4,8 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
+     <!-- daisyUI CDN-->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+
+
+      <!-- font CDN -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- font awosome cdn -->
+
+    <script src="https://kit.fontawesome.com/3ae38e1d82.js" crossorigin="anonymous"></script>
+    
+    <style>
+        .font-lexend{
+            font-family: "Lexend", system-ui;
+        }
+    
+        .bg-primary-c{
+    background-color:#B4F461 ;
+    }
+    .btn-text{
+    color: rgb(128, 126, 126);
+    }
+      </style>
+
+
 </head>
-<body>
+
+
+<body class="font-lexend">
+
+    <header class="sticky top-0  bg-blue-100 ">
+        <!-- navbar start --> 
+            <nav class="bg-[#F9F7F3] lg:pb-2">
+
+<div class="navbar lg:container mx-auto mb-8">
+
+                <div class="navbar-start">
+        
+<button id="blog-btn" class="bg-[#B4F461] px-8 py-3 rounded-xl text-xl font-bold">Blog</button>
+         </div>
+
+
+<div class="navbar-center flex sm:flex-col lg:flex-row">
+<div><img src="assets/logo.png" alt=""></div>
+
+ <div> <p class="">Donate Bangladesh</p></div>
+        </div>
+        
+                
+        
+        <div class="navbar-end">
+<img src="assets/coin.png" alt="">
+<p><span id="balance">10000</span> BDT</p> </div>
+</div>
+</nav>
+
+        
+      </header> 
+
+      <main class="container mx-auto">
+
+        <div class="font-bold text-3xl flex space-x-3 mt-12"><h1 class="">Importent FAQ</h1><i class="fa-solid fa-question"></i></div>
+
+        <div class="join join-vertical w-full mt-12">
+
+            <!-- 1st question -->
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object MOdel(DOM)?</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+              </div>
+            </div>
+
+            <!-- 2nd question -->
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+              <div class="collapse-content">
+                <p>The easiest way to find an HTML element in the DOM, is by using the element id. This example finds the element with id="intro": Example const element = document.getElementById("intro"); Try it Yourself » If the element is found, the method will return the element as an object (in element). If the element is not found, element will contain null</p>
+              </div>
+            </div>
+
+             <!-- 3rd question -->
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content">
+                <p>With event delegation, instead of handling the click event on the button, you can handle it on the div.The idea is that you "delegate" the handling of an event to a different element (in this case, the div, which is a parent element) instead of the actual element (the button) that received the event.</p>
+              </div>
+            </div>
+
+             <!-- 4th question -->
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you mainpulate an element's attributes and styles useing the DOM?</div>
+              <div class="collapse-content">
+                <p>Create Element In JavaScript It is common for interactive websites to create new elements dynamically on user's actions and use them.</p>
+              </div>
+            </div>
+          </div>
+
+
+      </main>
     
 </body>
 </html>
